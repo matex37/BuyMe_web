@@ -18,7 +18,7 @@ private static WebElement RegButton =null;
     private static  WebElement EnterMail=null;
     public static WebElement setEmail (WebDriver driver) {
       EnterMail=driver.findElement (Constants.email);
-      EnterMail.sendKeys("antontest60@ffgg.cdgf");
+      EnterMail.sendKeys("antontest66@ffgg.cdgf");
       return EnterMail;
     }
     private static WebElement EnterPass=null;

@@ -6,6 +6,7 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,17 +14,33 @@ import java.util.concurrent.TimeUnit;
 
 public class MainTest {
     private static WebDriver driver;
- 
+
     @BeforeClass
-    public static void beforeMyTest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Yosef\\Documents\\chromedriver_win32\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-       // options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-        driver.get("https://buyme.co.il");
+    public static void runBefore () throws Exception {
+        String browserType = LoadXml.getData ("Browser");
+        if(browserType.equals("Chrome")){
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Yosef\\Documents\\chromedriver_win32\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("start--incognito");
+            driver = new ChromeDriver(options);
+        }else if(browserType.equals("FireFox")){
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\Yosef\\Documents\\FirefoxDriver\\geckodriver.exe");
+            driver = new FirefoxDriver();
+        }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(LoadXml.getData("URL"));
     }
-    @Test
+
+
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Yosef\\Documents\\chromedriver_win32\\chromedriver.exe");
+//        ChromeOptions options = new ChromeOptions();
+//       // options.addArguments("--headless");
+//        driver = new ChromeDriver(options);
+//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+//        driver.get("https://buyme.co.il");
+//    }
+   @Test
     public void Test01(){
         HomeScreen.pressLogin(driver);
         Registration.newReg(driver);
@@ -65,6 +82,6 @@ public class MainTest {
     @AfterClass
     public static void afterAll() {
 
-    //    driver.quit();
+      //  driver.quit();
     }
 }
