@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 public class MainTest {
     private static WebDriver driver;
     //create the report object
-    //j
     private static ExtentReports extent = new ExtentReports();
     private static ExtentTest test ;
 
