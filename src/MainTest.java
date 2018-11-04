@@ -8,12 +8,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 import java.util.concurrent.TimeUnit;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class MainTest {
     private static WebDriver driver;
+    //create the report object
+    //j
+    private static ExtentReports extent = new ExtentReports();
+    private static ExtentTest test ;
 
     @BeforeClass
     public static void runBefore () throws Exception {
@@ -32,14 +37,6 @@ public class MainTest {
         driver.get(LoadXml.getData("URL"));
     }
 
-
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Yosef\\Documents\\chromedriver_win32\\chromedriver.exe");
-//        ChromeOptions options = new ChromeOptions();
-//       // options.addArguments("--headless");
-//        driver = new ChromeDriver(options);
-//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-//        driver.get("https://buyme.co.il");
-//    }
    @Test
     public void Test01(){
         HomeScreen.pressLogin(driver);
