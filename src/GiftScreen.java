@@ -19,18 +19,16 @@ public class GiftScreen {
         forSomeOne(driver);
     }
     //select the name of friend for gift
-    private static WebElement NameOfFriend = null;
-    public static WebElement Name (WebDriver driver)    {
-        NameOfFriend = driver.findElement(Constants.FriendName);
-        NameOfFriend.sendKeys("Leon");
-        return NameOfFriend;
+    //private static WebElement NameOfFriend = null;
+    public static void Name (WebDriver driver)    {
+        driver.findElement(Constants.FriendName).sendKeys("Leon");
+
     }
     //send name of buyer the gift
-    private  static WebElement FromWho = null;
-    public static WebElement BuyerName (WebDriver driver){
-        FromWho = driver.findElement(Constants.FromWho);
-        FromWho.sendKeys("Anton");
-        return FromWho;
+   // private  static WebElement FromWho = null;
+    public static void BuyerName (WebDriver driver){
+        driver.findElement(Constants.FromWho).sendKeys("Anton");
+
     }
     //open event catagory dropdown menu
     private static WebElement WhatEvent = null;

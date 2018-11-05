@@ -1,3 +1,7 @@
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -8,16 +12,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-
 import java.util.concurrent.TimeUnit;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 
 public class MainTest {
     private static WebDriver driver;
     //create the report object
     private static ExtentReports extent = new ExtentReports();
     private static ExtentTest test ;
+    private static ExtentHtmlReporter htmlReport;
+
 
     @BeforeClass
     public static void runBefore () throws Exception {
@@ -34,10 +40,18 @@ public class MainTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(LoadXml.getData("URL"));
+        //log information into the report
+        htmlReport = new ExtentHtmlReporter("C:\\Users\\Yosef\\Desktop\\extent.html");
+        extent.attachReporter(htmlReport);
+        extent.setSystemInfo("Environment", "Production");
+        test = extent.createTest("MyTest","Sample description");
+        test.log(Status.INFO,"before test method");
     }
 
    @Test
     public void Test01(){
+
+       test.log(Status.INFO,"connecting driver");
         HomeScreen.pressLogin(driver);
         Registration.newReg(driver);
         Registration.setName(driver);
@@ -49,6 +63,12 @@ public class MainTest {
   }
     @Test
     public void Test02() {
+        test.log(Status.INFO,"connecting driver");
+        try {
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         HomeScreen.ChooseAmount(driver);
         HomeScreen.MyAmount(driver);
         HomeScreen.ChooseArea(driver);
@@ -61,6 +81,7 @@ public class MainTest {
     }
         @Test
         public void Test03(){
+           test.log(Status.INFO,"connecting driver");
 
         GiftScreen.GiftForSomeOne(driver);
         GiftScreen.Name(driver);

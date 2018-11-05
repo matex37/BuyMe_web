@@ -22,5 +22,6 @@
     <orderEntry type="library" name="okhttp-3.10.0" level="project" />
     <orderEntry type="library" name="ngwebdriver-1.0 (2)" level="project" />
     <orderEntry type="library" name="commons-lang3-3.5" level="project" />
+    <orderEntry type="library" name="extentreports-3.1.2" level="project" />
   </component>
 </module>
