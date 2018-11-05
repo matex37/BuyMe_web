@@ -6,12 +6,10 @@ import java.util.concurrent.TimeUnit;
 
 public class HomeScreen {
     //function is press to login button
-    public static WebElement LoginButton = null;
 
-    public static WebElement pressLogin(WebDriver driver) {
-        LoginButton = driver.findElement(Constants.LogInLocator);
-        LoginButton.click();
-        return LoginButton;
+    public static void pressLogin(WebDriver driver) {
+        driver.findElement(Constants.LogInLocator).click();
+
     }
 
     //function for open amount dropdown menu
@@ -73,31 +71,27 @@ public class HomeScreen {
     public static WebElement MyCatagory(WebDriver driver) {
         List<WebElement> CatagoryList = driver.findElements(Constants.ChooseCatagory);
         CatagoryList.get(3).click();
-        return Area;
+        return Catagory;
     }
 
     //function for find gift
-    private static WebElement Gift = null;
+        public static void findGift(WebDriver driver) {
+       driver.findElement(Constants.FindGiftLocator).click();
 
-    public static WebElement findGift(WebDriver driver) {
-        Gift = driver.findElement(Constants.FindGiftLocator);
-        Gift.click();
-         return Gift;
     }
-
+// function for choose  company
     private static WebElement GiftCard = null;
 
     public static WebElement chooseGiftCompany(WebDriver driver) {
         GiftCard = driver.findElement(Constants.ChooseGiftCompany);
-        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         GiftCard.click();
                 return GiftCard;
     }
-    private  static  WebElement GiftSubmit =null;
-    public static WebElement GiftEnter (WebDriver driver){
-        GiftSubmit=driver.findElement(Constants.ChooseGiftParam);
-        GiftSubmit.click();
-        return GiftSubmit;
+    //function for submit choosed gift
+    public static void GiftEnter (WebDriver driver){
+        driver.findElement(Constants.ChooseGiftParam).click();
+
     }
 
 

@@ -31,16 +31,16 @@ public class MainTest {
         if(browserType.equals("Chrome")){
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\Yosef\\Documents\\chromedriver_win32\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("start--incognito");
+           // options.addArguments("start--incognito");
             driver = new ChromeDriver(options);
         }else if(browserType.equals("FireFox")){
             System.setProperty("webdriver.gecko.driver", "C:\\Users\\Yosef\\Documents\\FirefoxDriver\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
-        driver.manage().window().maximize();
+        driver.manage().window();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(LoadXml.getData("URL"));
-        //log information into the report
+//        //log information into the report
         htmlReport = new ExtentHtmlReporter("C:\\Users\\Yosef\\Desktop\\extent.html");
         extent.attachReporter(htmlReport);
         extent.setSystemInfo("Environment", "Production");
@@ -50,7 +50,7 @@ public class MainTest {
 
    @Test
     public void Test01(){
-
+//this test check the registration of new user
        test.log(Status.INFO,"connecting driver");
         HomeScreen.pressLogin(driver);
         Registration.newReg(driver);
@@ -63,6 +63,7 @@ public class MainTest {
   }
     @Test
     public void Test02() {
+        //this test check the search and choose the gift
         test.log(Status.INFO,"connecting driver");
         try {
             Thread.sleep(1000);
@@ -81,6 +82,7 @@ public class MainTest {
     }
         @Test
         public void Test03(){
+        //this test check the sending process of chosen gift
            test.log(Status.INFO,"connecting driver");
 
         GiftScreen.GiftForSomeOne(driver);
@@ -99,6 +101,6 @@ public class MainTest {
     @AfterClass
     public static void afterAll() {
 
-      //  driver.quit();
+        driver.quit();
     }
 }

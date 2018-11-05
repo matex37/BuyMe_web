@@ -19,14 +19,13 @@ public class GiftScreen {
         forSomeOne(driver);
     }
     //select the name of friend for gift
-    //private static WebElement NameOfFriend = null;
+
     public static void Name (WebDriver driver)    {
         driver.findElement(Constants.FriendName).sendKeys("Leon");
 
     }
     //send name of buyer the gift
-   // private  static WebElement FromWho = null;
-    public static void BuyerName (WebDriver driver){
+       public static void BuyerName (WebDriver driver){
         driver.findElement(Constants.FromWho).sendKeys("Anton");
 
     }
@@ -34,7 +33,7 @@ public class GiftScreen {
     private static WebElement WhatEvent = null;
     public static WebElement SelectEventTab (WebDriver driver) {
         WhatEvent = driver.findElement(Constants.EventBox);
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         WhatEvent.click();
         return WhatEvent;
     }
@@ -45,45 +44,29 @@ public class GiftScreen {
         EventList.get(1).click();
         return ChooseEvent;
     }
-    //add picture to the gift
-    private static WebElement AddPicture =null;
-    public  static void Picture (WebDriver driver){
+    //add picture for the gift
+        public  static void Picture (WebDriver driver){
         driver.findElement(Constants.UploadPicture).sendKeys("C:\\Users\\Yosef\\Documents\\image_fof_gift.png");
     }
     //time to send gift to friend
-    private static WebElement TimeToSend = null;
-    public static WebElement ChooseTimeToSend (WebDriver driver){
-    TimeToSend=driver.findElement(Constants.AfterPayment);
-    TimeToSend.click();
-    return  TimeToSend;
+        public static void ChooseTimeToSend (WebDriver driver){
+    driver.findElement(Constants.AfterPayment).click();
+
   }
   //choose send gift to friend by e-mail
-    private static WebElement Email= null;
-    public static WebElement SendByEmail (WebDriver driver){
-        Email=driver.findElement(Constants.SendEmail);
-        Email.click();
-        return Email;
-    }
+        public static void SendByEmail (WebDriver driver){
+        driver.findElement(Constants.SendEmail).click();
+           }
     //inter friend email address
-    private static  WebElement EmailAddress = null;
-    public static WebElement FriendsEmail (WebDriver driver){
-        EmailAddress= driver.findElement(Constants.EmailAddress);
-        EmailAddress.sendKeys("Leon@gaga.com");
-        return EmailAddress;
-            }
+        public static void FriendsEmail (WebDriver driver){
+        driver.findElement(Constants.EmailAddress).sendKeys("Leon@gaga.com");
+                    }
     //save the friends e-mail
-    private static WebElement SaveTheEmail = null;
-    public static WebElement SaveEmail (WebDriver driver){
-        SaveTheEmail= driver.findElement(Constants.SaveEmail);
-
-        SaveTheEmail.click();
-        return SaveTheEmail;
-    }
-    //to pay the gift
-    private static  WebElement Pay = null;
-    public static WebElement PayButton (WebDriver driver){
-        Pay=driver.findElement(Constants.PayButton);
-        Pay.click();
-        return Pay;
-    }
+        public static void SaveEmail (WebDriver driver){
+        driver.findElement(Constants.SaveEmail).click();
+            }
+    // pay  the gift
+        public static void PayButton (WebDriver driver){
+       driver.findElement(Constants.PayButton).click();
+          }
 }

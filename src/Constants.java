@@ -8,20 +8,20 @@ public class Constants {
 
     //new user registration
     public static final By registration = By.className("header-link");
-    public static final By name = By.id("ember890");
-    public static final By email = By.id("ember891");
+    public static final By name = By.id("ember901");
+    public static final By email = By.id("ember902");
     public static final By pass = By.id("valPass");
-    public static final By passvalid = By.id("ember893");
+    public static final By passvalid = By.id("ember904");
     public static final By Iagree = By.xpath("//label[@for='register-consent']");
-    public static final By submitReg = By.xpath("//*[@id=\"ember889\"]/button");
+    public static final By submitReg = By.xpath("//*[@id=\"ember900\"]/button");
 
     //B.home screen
     public static final By FindGiftLocator =(By.id("ember664"));//תמצאו לי מתנה
     public static final By AmountBox = (By.xpath("//span[.='סכום']")); //בחירת רשימה של סכומים
     public static final By ChooseAmonut = (By.className("active-result"));// בחירת סכום מתנה
-    public static final By AreaBox =(By.xpath("//*[@id=\"ember620_chosen\"]/a/span"));// בחירת רשימת אזור
+    public static final By AreaBox =(By.xpath("//*[@id=\"ember632_chosen\"]/a/span"));// בחירת רשימת אזור
     public static final By ChooseArea = (By.className("active-result")); //בחירת אזור
-    public static final By CatagoryBox =(By.xpath("//*[@id=\"ember629_chosen\"]/a/span"));//בחירת רשימת סוגי מתנןת
+    public static final By CatagoryBox =(By.xpath("//*[@id=\"ember641_chosen\"]/a/span"));//בחירת רשימת סוגי מתנןת
     public static final By ChooseCatagory =(By.className("active-result"));//בחירת סוג מתנה
 
     //C.giftscreen
