@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bf5cc8c-d21a-4940-935b-75a4c9aa5446" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/commons-lang3-3.5.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuyMe_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BuyMe_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +20,8 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="239">
+              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/LoadXml.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="14" column="46" selection-start-line="6" selection-end-line="22" />
+              <caret line="14" column="46" lean-forward="true" selection-start-line="6" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +156,6 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Yosef\IdeaProjects\BuyMe_web\libs" />
       <recent name="C:\Users\Yosef\IdeaProjects\BuyMe_web" />
       <recent name="C:\Users\Yosef\IdeaProjects\BuyMe_web\.idea" />
     </key>
@@ -334,14 +329,7 @@
       <option name="project" value="LOCAL" />
       <updated>1541330853682</updated>
     </task>
-    <task id="LOCAL-00004" summary="add loadXml class">
-      <created>1541331302540</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1541331302540</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -413,8 +401,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="j" />
     <MESSAGE value="jgv" />
-    <MESSAGE value="add loadXml class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loadXml class" />
+    <option name="LAST_COMMIT_MESSAGE" value="jgv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -608,7 +595,7 @@
     <entry file="file://$PROJECT_DIR$/src/LoadXml.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="14" column="46" selection-start-line="6" selection-end-line="22" />
+          <caret line="14" column="46" lean-forward="true" selection-start-line="6" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -617,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="239">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
